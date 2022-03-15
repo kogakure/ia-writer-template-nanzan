@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleIdentifier</key>
+    <string>net.ia.writer.template.nanzan</string>
+    <key>CFBundleName</key>
+    <string>Nanzan</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>IATemplateDocumentFile</key>
+    <string>document</string>
+    <key>IATemplateTitleFile</key>
+    <string>title</string>
+    <key>IATemplateFooterFile</key>
+    <string>footer</string>
+    <key>IATemplateFooterHeight</key>
+    <integer>90</integer>
+    <key>IATemplateHeaderFile</key>
+    <string>header</string>
+    <key>IATemplateHeaderHeight</key>
+    <integer>90</integer>
+    <key>IATemplateDescription</key>
+    <string>Template inspired by the typographic style of the book “Engaging Japanese Philosophy”.</string>
+    <key>IATemplateAuthor</key>
+    <string>Stefan Imhoff</string>
+    <key>IATemplateAuthorURL</key>
+    <string>https://www.stefanimhoff.de</string>
+  </dict>
+</plist>

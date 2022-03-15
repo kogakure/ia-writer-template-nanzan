@@ -1,0 +1,369 @@
+/**
+ * Nanzan (南山)
+ *
+ * This template is inspired by the typographic style of the book
+ * “Engaging Japanese Philosophy” by Thomas P. Kasulis, designed
+ * by the Nanzan Institute for Religion and Culture.
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html {
+  --color: hsl(0, 5%, 23%, 1);
+  color: var(--color);
+}
+
+html.night-mode {
+  --color: hsl(0, 5%, 77%, 0.95);
+  color: var(--color);
+}
+
+body {
+  --horizontal-padding: 0;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: Playfair Display, serif;
+  font-size: 100%;
+  line-height: 1.6;
+  padding-block-end: 0;
+  padding-block-start: 0;
+  padding-inline-end: var(--horizontal-padding);
+  padding-inline-start: var(--horizontal-padding);
+  word-wrap: break-word;
+}
+
+@supports (padding: constant(safe-area-inset-left)) and
+  (padding: constant(safe-area-inset-right)) {
+  body {
+    padding-inline-start: calc(
+      var(--horizontal-padding) + constant(safe-area-inset-left)
+    );
+    padding-inline-end: calc(
+      var(--horizontal-padding) + constant(safe-area-inset-right)
+    );
+  }
+}
+
+@supports (padding: env(safe-area-inset-left)) and
+  (padding: env(safe-area-inset-right)) {
+  body {
+    padding-inline-end: calc(
+      var(--horizontal-padding) + env(safe-area-inset-right)
+    );
+    padding-inline-start: calc(
+      var(--horizontal-padding) + env(safe-area-inset-left)
+    );
+  }
+}
+
+@media screen {
+  body {
+    margin: 0 auto;
+    max-width: calc(700px - 90px);
+  }
+}
+
+@media screen and (max-width: 520px) {
+  body {
+    --horizontal-padding: 15px;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  body {
+    --horizontal-padding: 45px;
+  }
+}
+
+:is(h1, h2, h3, h4, h5, h6, ul, ol, blockquote, pre, hr, figure, img) {
+  clear: inline-start;
+}
+
+:is(h1, h2, h3, h4, h5, h6) + h1,
+:is(h1, h2, h3, h4, h5, h6) + h2,
+:is(h1, h2, h3, h4, h5, h6) + h3,
+:is(h1, h2, h3, h4, h5, h6) + h4,
+:is(h1, h2, h3, h4, h5, h6) + h5,
+:is(h1, h2, h3, h4, h5, h6) + h6 {
+  margin-block-start: 0;
+  text-indent: initial;
+}
+
+h1 {
+  font-size: 1.8em;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: Playfair Display SC, serif;
+  font-size: 1.2em;
+  font-variant: small-caps;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-block-start: 1.4em;
+  text-indent: 5rem;
+}
+
+h2 + :is(h1, h2, h3, h4, h5, h6, p) {
+  text-indent: 5rem;
+}
+
+h2 + :is(ul, ol, blockquote, table, figure) {
+  padding-inline-start: 5rem;
+}
+
+h2 + hr {
+  margin-inline-start: 5rem;
+}
+
+h3 {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 400;
+  margin-block-start: 1em;
+  text-indent: 5rem;
+}
+
+h3 + :is(h1, h2, h3, h4, h5, h6, p) {
+  text-indent: 5rem;
+}
+
+h3 + :is(ul, ol, blockquote, pre, table, figure) {
+  padding-inline-start: 5rem;
+}
+
+h3 + hr {
+  margin-inline-start: 5rem;
+}
+
+:is(h1, h2, h3, h4, h5, h6) + h4 {
+  float: none;
+}
+
+h4 {
+  float: inline-start;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 400;
+  margin-block-end: 0;
+  margin-block-start: 1em;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+}
+
+h4::after {
+  content: ".";
+  margin-inline-end: 0.5em;
+}
+
+:is(h1, h2, h3, h4, h5, h6) + h4::after {
+  content: none;
+}
+
+h5 {
+  font-family: Playfair Display SC, serif;
+  font-size: 0.8em;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  margin-block-end: 1em;
+  margin-block-start: 2em;
+  text-indent: 1.2rem;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-size: 0.8em;
+  font-style: italic;
+  font-weight: 400;
+  margin-block-end: 1em;
+  text-indent: 1.2rem;
+}
+
+p {
+  hyphens: auto;
+  margin: 0;
+  text-align: justify;
+  text-indent: 1.2rem;
+  word-break: break-word;
+}
+
+:is(h1, h4) + p {
+  text-indent: 0;
+}
+
+h4 {
+  margin-block-start: 1em;
+}
+
+h4 + p {
+  margin-block-start: 1em;
+}
+
+:is(h1, h2, h3, h4, h5, h6) + :is(h1, h2, h3, h4, h5, h6) + p {
+  text-indent: initial;
+}
+
+a {
+  color: var(--color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
+:is(ol, ul) {
+  padding: 0;
+}
+
+:is(ol, ul) :is(ol, ul) {
+  margin-inline-start: 1.2em;
+}
+
+:is(ol, ul) :is(ol, ul) {
+  margin-inline-start: 1.2em;
+}
+
+li {
+  list-style-position: inside;
+  text-indent: 1.2rem;
+}
+
+figure {
+  margin-block-end: 1.2rem;
+  margin-block-start: 1.2rem;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+}
+
+figcaption {
+  font-size: 80%;
+  text-align: center;
+}
+
+table {
+  margin-block-end: 1.2rem;
+  margin-block-start: 1.2rem;
+  width: 100%;
+}
+
+pre {
+  font-size: 85%;
+  line-height: 1.5;
+  overflow: auto;
+  padding: 1.2em;
+}
+
+code {
+  padding-block: 2px;
+  padding-inline: 4px;
+}
+
+code,
+kbd,
+pre {
+  border-radius: 3px;
+  font-family: monospace;
+}
+
+pre code {
+  background-color: transparent;
+  border: 0;
+  display: inline;
+  font-size: 1em;
+  line-height: inherit;
+  margin: 0;
+  max-width: auto;
+  overflow: visible;
+  padding: 0;
+  word-wrap: normal;
+}
+
+pre code::before,
+pre code::after {
+  content: normal;
+}
+
+code,
+pre {
+  background-color: #e2e2e2;
+  color: #3e3838;
+}
+
+.night-mode code,
+.night-mode pre {
+  background-color: #3e3838;
+  color: #c7c1c1;
+}
+
+hr {
+  border-block-end-width: 0;
+  border-width: 1px;
+  color: var(--color);
+  margin-block-end: 2.4rem;
+  margin-block-start: 2.4rem;
+}
+
+table {
+  margin-block-end: 1.2rem;
+  margin-block-start: 1.2rem;
+  width: 100%;
+}
+
+hr {
+  border-block-end-width: 0;
+  border-width: 1px;
+  color: var(--color);
+  margin-block-end: 2.4rem;
+  margin-block-start: 2.4rem;
+}
+
+blockquote {
+  margin-inline: 1.2em;
+}
+
+:is(h1, h2, h3, h4, h5, h6) + blockquote {
+  margin-inline: initial;
+}
+
+blockquote p {
+  text-indent: 0;
+}
+
+@media screen {
+  body pre {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media print {
+  body {
+    --horizontal-padding: 75px;
+  }
+
+  body pre code {
+    white-space: pre-wrap;
+  }
+}
+
+.footnote {
+  text-decoration: none;
+}
+
+.footnotes hr {
+  float: inline-start;
+  width: 20%;
+}
+
+.footnotes li {
+  font-size: 80%;
+}
+
+.footnotes p {
+  text-align: start;
+}
+
+.footnotes .reversefootnote {
+  text-decoration: none;
+}
