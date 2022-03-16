@@ -1,0 +1,70 @@
+:root {
+  --color-bg: hsl(40, 7%, 90%);
+  --color-fg: hsl(40, 7%, 5%);
+}
+
+.night-mode {
+  --color-bg: hsl(40, 7%, 10%);
+  --color-fg: hsla(40, 7%, 90%, 0.95);
+}
+
+:root {
+  /** Border Widths */
+  --border-width-1: 1px;
+  --border-width-10: 0.1em;
+  --border-width-15: 0.15em;
+
+  /** Font Families */
+  --font-family-base: Playfair Display, serif;
+  --font-family-sc: Playfair Display SC, serif;
+  --font-family-mono: Fira Code, Operator, Hasklig, Monoid, monospace;
+
+  /** Font Sizes */
+  --font-size-1: 0.65em;
+  --font-size-2: clamp(0.65rem, 0.8vw, 0.75rem);
+  --font-size-3: clamp(1rem, 1.1vw, 1.25rem);
+  --font-size-4: clamp(1.25rem, 1.8vw, 2rem);
+  --font-size-5: clamp(1.5rem, 2.9vw, 3.25rem);
+  --font-size-6: clamp(2.25rem, 4.7vw, 5.3rem);
+  --font-size-7: clamp(3.3rem, 7.3vw, 8.5rem);
+  --font-size-8: clamp(4.5rem, 12.2vw, 13.87rem);
+  --font-size-9: clamp(5.5rem, 28.7vw, 22.43rem);
+
+  /** Font Weights */
+  --font-weight-thin: 100;
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-black: 900;
+
+  /** Line Heights */
+  --line-height-1: 1;
+  --line-height-2: 1.6;
+
+  /** Space */
+  --space-1: 0.335rem;
+  --space-2: clamp(0.335rem, 0.72vw, 0.402rem);
+  --space-3: clamp(0.402rem, 0.86vw, 0.482rem);
+  --space-4: clamp(0.482rem, 1.03vw, 0.579rem);
+  --space-5: clamp(0.579rem, 1.24vw, 0.694rem);
+  --space-6: clamp(0.694rem, 1.49vw, 0.833rem);
+  --space-7: clamp(0.833rem, 1.78vw, 1rem);
+  --space-8: clamp(1rem, 2.14vw, 1.2rem);
+  --space-9: clamp(1.2rem, 2.57vw, 1.44rem);
+  --space-10: clamp(1.44rem, 3.7vw, 1.728rem);
+  --space-11: clamp(1.728rem, 3.7vw, 2.074rem);
+  --space-12: clamp(2.074rem, 4.44vw, 2.488rem);
+  --space-13: clamp(2.488rem, 5.32vw, 2.986rem);
+  --space-14: clamp(2.986rem, 6.39vw, 3.583rem);
+  --space-15: clamp(3.583rem, 7.67vw, 4.3rem);
+  --space-16: clamp(4.3rem, 9.2vw, 5.16rem);
+  --space-17: clamp(5.16rem, 11.04vw, 6.192rem);
+  --space-18: clamp(6.192rem, 13.25vw, 7.43rem);
+  --space-19: clamp(7.43rem, 15.9vw, 8.916rem);
+  --space-20: clamp(8.916rem, 19.08vw, 10.699rem);
+  --space-55: 5.55vw;
+}

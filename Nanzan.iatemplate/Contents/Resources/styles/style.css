@@ -6,30 +6,27 @@
  * by the Nanzan Institute for Religion and Culture.
  */
 
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-html {
-  --color: hsl(0, 5%, 23%, 1);
-  color: var(--color);
-}
-
-html.night-mode {
-  --color: hsl(0, 5%, 77%, 0.95);
-  color: var(--color);
-}
+@import "variables.css";
+@import "fonts/fonts.css";
 
 body {
-  --horizontal-padding: 0;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  font-family: Playfair Display, serif;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: var(--font-family-base);
   font-size: 100%;
-  line-height: 1.6;
+  line-height: var(--line-height-2);
   padding-block-end: 0;
   padding-block-start: 0;
   padding-inline-end: var(--horizontal-padding);
   padding-inline-start: var(--horizontal-padding);
   word-wrap: break-word;
+}
+
+@media screen {
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+  }
 }
 
 @supports (padding: constant(safe-area-inset-left)) and
@@ -58,8 +55,8 @@ body {
 
 @media screen {
   body {
-    margin: 0 auto;
-    max-width: calc(700px - 90px);
+    margin-inline: auto;
+    max-width: 88vw;
   }
 }
 
@@ -72,6 +69,7 @@ body {
 @media screen and (min-width: 520px) {
   body {
     --horizontal-padding: 45px;
+    max-width: 66vw;
   }
 }
 
@@ -90,50 +88,53 @@ body {
 }
 
 h1 {
-  font-size: 1.8em;
-  font-weight: 400;
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-1);
 }
 
 h2 {
-  font-family: Playfair Display SC, serif;
-  font-size: 1.2em;
+  font-family: var(--font-family-sc);
+  font-size: var(--font-size-3);
   font-variant: small-caps;
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
   letter-spacing: 0.1em;
-  margin-block-start: 1.4em;
-  text-indent: 5rem;
+  line-height: var(--line-height-1);
+  margin-block-start: var(--space-9);
+  text-indent: var(--space-14);
 }
 
 h2 + :is(h1, h2, h3, h4, h5, h6, p) {
-  text-indent: 5rem;
+  text-indent: var(--space-14);
 }
 
 h2 + :is(ul, ol, blockquote, table, figure) {
-  padding-inline-start: 5rem;
+  padding-inline-start: var(--space-14);
 }
 
 h2 + hr {
-  margin-inline-start: 5rem;
+  margin-inline-start: var(--space-14);
 }
 
 h3 {
-  font-size: 1em;
+  font-size: var(--font-size-3);
   font-style: italic;
-  font-weight: 400;
-  margin-block-start: 1em;
-  text-indent: 5rem;
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-1);
+  margin-block-start: var(--space-9);
+  text-indent: var(--space-14);
 }
 
 h3 + :is(h1, h2, h3, h4, h5, h6, p) {
-  text-indent: 5rem;
+  text-indent: var(--space-14);
 }
 
 h3 + :is(ul, ol, blockquote, pre, table, figure) {
-  padding-inline-start: 5rem;
+  padding-inline-start: var(--space-14);
 }
 
 h3 + hr {
-  margin-inline-start: 5rem;
+  margin-inline-start: var(--space-14);
 }
 
 :is(h1, h2, h3, h4, h5, h6) + h4 {
@@ -142,11 +143,11 @@ h3 + hr {
 
 h4 {
   float: inline-start;
-  font-size: 1em;
+  font-size: var(--font-size-3);
   font-style: italic;
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
   margin-block-end: 0;
-  margin-block-start: 1em;
+  margin-block-start: var(--space-6);
   margin-inline-end: 0;
   margin-inline-start: 0;
 }
@@ -162,28 +163,30 @@ h4::after {
 
 h5 {
   font-family: Playfair Display SC, serif;
-  font-size: 0.8em;
-  font-weight: 400;
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-normal);
   letter-spacing: 0.025em;
-  margin-block-end: 1em;
-  margin-block-start: 2em;
-  text-indent: 1.2rem;
+  line-height: var(--line-height-1);
+  margin-block-end: var(--space-6);
+  margin-block-start: var(--space-9);
+  text-indent: var(--space-9);
   text-transform: uppercase;
 }
 
 h6 {
-  font-size: 0.8em;
+  font-size: var(--font-size-3);
   font-style: italic;
-  font-weight: 400;
-  margin-block-end: 1em;
-  text-indent: 1.2rem;
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-1);
+  margin-block-end: var(--space-6);
+  text-indent: var(--space-9);
 }
 
 p {
   hyphens: auto;
   margin: 0;
   text-align: justify;
-  text-indent: 1.2rem;
+  text-indent: var(--space-9);
   word-break: break-word;
 }
 
@@ -192,11 +195,11 @@ p {
 }
 
 h4 {
-  margin-block-start: 1em;
+  margin-block-start: var(--space-6);
 }
 
 h4 + p {
-  margin-block-start: 1em;
+  margin-block-start: var(--space-6);
 }
 
 :is(h1, h2, h3, h4, h5, h6) + :is(h1, h2, h3, h4, h5, h6) + p {
@@ -204,7 +207,7 @@ h4 + p {
 }
 
 a {
-  color: var(--color);
+  color: var(--color-fg);
 }
 
 img {
@@ -213,26 +216,34 @@ img {
   width: 100%;
 }
 
-:is(ol, ul) {
+:is(ol, ul, dl) {
   padding: 0;
 }
 
 :is(ol, ul) :is(ol, ul) {
-  margin-inline-start: 1.2em;
+  margin-inline-start: var(--space-9);
 }
 
 :is(ol, ul) :is(ol, ul) {
-  margin-inline-start: 1.2em;
+  margin-inline-start: var(--space-9);
 }
 
 li {
   list-style-position: inside;
-  text-indent: 1.2rem;
+  text-indent: var(--space-9);
+}
+
+dt {
+  font-weight: var(--font-weight-bold);
+}
+
+dd {
+  margin-inline-start: var(--space-9);
 }
 
 figure {
-  margin-block-end: 1.2rem;
-  margin-block-start: 1.2rem;
+  margin-block-end: var(--space-9);
+  margin-block-start: var(--space-9);
   margin-inline-end: 0;
   margin-inline-start: 0;
 }
@@ -243,8 +254,8 @@ figcaption {
 }
 
 table {
-  margin-block-end: 1.2rem;
-  margin-block-start: 1.2rem;
+  margin-block-end: var(--space-9);
+  margin-block-start: var(--space-9);
   width: 100%;
 }
 
@@ -252,7 +263,7 @@ pre {
   font-size: 85%;
   line-height: 1.5;
   overflow: auto;
-  padding: 1.2em;
+  padding: var(--space-9);
 }
 
 code {
@@ -264,14 +275,14 @@ code,
 kbd,
 pre {
   border-radius: 3px;
-  font-family: monospace;
+  font-family: var(--font-family-mono);
 }
 
 pre code {
   background-color: transparent;
   border: 0;
   display: inline;
-  font-size: 1em;
+  font-size: var(--font-size-3);
   line-height: inherit;
   margin: 0;
   max-width: auto;
@@ -299,28 +310,28 @@ pre {
 
 hr {
   border-block-end-width: 0;
-  border-width: 1px;
-  color: var(--color);
-  margin-block-end: 2.4rem;
-  margin-block-start: 2.4rem;
+  border-width: var(--border-width-1);
+  color: var(--color-fg);
+  margin-block-end: var(--space-13);
+  margin-block-start: var(--space-13);
 }
 
 table {
-  margin-block-end: 1.2rem;
-  margin-block-start: 1.2rem;
+  margin-block-end: var(--space-9);
+  margin-block-start: var(--space-9);
   width: 100%;
 }
 
 hr {
   border-block-end-width: 0;
-  border-width: 1px;
-  color: var(--color);
-  margin-block-end: 2.4rem;
-  margin-block-start: 2.4rem;
+  border-width: var(--border-width-1);
+  color: var(--color-fg);
+  margin-block-end: var(--space-13);
+  margin-block-start: var(--space-13);
 }
 
 blockquote {
-  margin-inline: 1.2em;
+  margin-inline: var(--space-9);
 }
 
 :is(h1, h2, h3, h4, h5, h6) + blockquote {
