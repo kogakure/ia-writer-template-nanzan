@@ -95,10 +95,11 @@ h1 {
 
 h2 {
   font-family: var(--font-family-sc);
+  font-feature-settings: "c2sc", "smcp";
   font-size: var(--font-size-3);
-  font-variant: small-caps;
+  font-variant-caps: all-small-caps;
   font-weight: var(--font-weight-normal);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   line-height: var(--line-height-1);
   margin-block-start: var(--space-9);
   text-indent: var(--space-14);
