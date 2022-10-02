@@ -9,6 +9,26 @@
 @import "variables.css";
 @import "fonts/fonts.css";
 
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+html.night-mode {
+  color: #c9d1d9;
+}
+
+html:not(.night-mode) {
+  color: #24292f;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
   background-color: #ffffff;
   color: #000000;
